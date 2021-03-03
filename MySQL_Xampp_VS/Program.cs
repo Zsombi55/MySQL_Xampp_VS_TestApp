@@ -33,7 +33,7 @@ namespace MySQL_Xampp_VS
                 conn = new MySqlConnection(connstring);
                 conn.Open();
 
-                string query = "SELECT * FROM [myTestTable]";
+                string query = "SELECT * FROM myTestTable";
 
                 MySqlCommand cmd = new MySqlCommand(query, conn);
 

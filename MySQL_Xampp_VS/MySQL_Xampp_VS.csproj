@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="8.0.23" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="MySql.Data">
       <HintPath>C:\kell\SQL, Database systems\MySQL\mysql-connector-net-8.0.23-noinstall\v4.8\MySql.Data.dll</HintPath>
       <Private>true</Private>
