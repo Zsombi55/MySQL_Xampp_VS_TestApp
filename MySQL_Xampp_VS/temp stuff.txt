@@ -1,0 +1,23 @@
+﻿TEMP STUFF
+--------------
+conn = new MySqlConnection(connstring);
+conn.Open();
+
+string query = "SELECT * FROM [myTestTable]";
+
+MySqlCommand cmd = new MySqlCommand(query, conn);
+
+MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
+DataSet ds = new DataSet();
+da.Fill(ds, "myTestTable");
+DataTable dt = ds.Tables["myTestTable"];
+foreach (DataRow row in dt.Rows)
+{
+    foreach (DataColumn col in dt.Columns)
+    {
+        Console.Write("\t" + row[col]);
+    }
+
+    Console.Write("\n");                  
+}
+---------------
