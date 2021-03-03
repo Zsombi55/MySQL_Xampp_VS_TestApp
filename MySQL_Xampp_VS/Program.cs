@@ -3,8 +3,9 @@
  * Then justs reads the specified table line by line and prints it out.
  */
 
+// TODO: add Entity Framework, turn it into an ASP.NET web app that does the same as this now, lists all DB entries.
+
 using System;
-using System.Data;
 using MySql.Data.MySqlClient;
 
 namespace MySQL_Xampp_VS
@@ -42,9 +43,6 @@ namespace MySQL_Xampp_VS
                 // Read per line then write it out, nothing fancy.
                 while (reader.Read())
                 {
-                    //Console.WriteLine(
-                    //    reader.GetString("Id") + "\t" + reader.GetString("Name") + "\t" + reader.GetString("Age"));
-
                     Console.WriteLine(
                         reader["Id"].ToString() + "\t" +
                         reader["Name"].ToString() + "\t" +
